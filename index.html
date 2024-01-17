@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Random Background Image</title>
+<script>
+function setRandomBackground() {
+  // Generate a random number between 1 and 100
+  var randomNumber = Math.floor(Math.random() * 17000) + 1;
+
+  // Pad the number with a leading zero if it's less than 10
+  randomNumber = randomNumber.toString().padStart(6, '0');
+
+  // Construct the image path
+  var imagePath = "https://raw.githubusercontent.com/pantsmaners/ted/main/frame_" + randomNumber + ".jpg"; // Adjust the path if images are in a different folder
+
+  // Set the background image of the body
+  document.body.style.backgroundImage = "url(" + imagePath + ")";
+}
+</script>
+</head>
+<body onload="setRandomBackground()">
+  </body>
+</html>
