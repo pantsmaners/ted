@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <style>
+            img{
+                width:1%
+            }
+        </style>
+
+<script>
+    function setRandomBackground() {
+
+        for (var i=1;i<=17085; i++) {
+
+            var elem = document.createElement("img");
+            var newt  = i.toString().padStart(6, '0');
+            elem.src = 'https://raw.githubusercontent.com/pantsmaners/ted/main/frame_'+ newt + ".jpg";;
+            
+            document.getElementById("placehere").appendChild(elem);
+
+
+        }
+
+    }
+    </script>
+    </head>
+    <body onload="setRandomBackground()">
+        <div id="placehere">
+
+
+        </div>
+    </body>
+</html>
